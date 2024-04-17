@@ -24,7 +24,7 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("StartScene");
 
         // Reset variables
-        int variables = 0;
+        
     }
 
     public void QuitGame()
