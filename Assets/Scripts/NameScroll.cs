@@ -15,9 +15,9 @@ public class ContributorsLoop : MonoBehaviour
             contributor.anchoredPosition += Vector2.right * scrollSpeed * Time.deltaTime;
 
             // If the contributor's RectTransform has moved beyond the screen, reset its position to the left side
-            if (contributor.anchoredPosition.x > Screen.width)
+            if (contributor.anchoredPosition.x > (contributor.rect.width + Screen.width) / 2)
             {
-                contributor.anchoredPosition = new Vector2(-contributor.rect.width, contributor.anchoredPosition.y);
+                contributor.anchoredPosition = new Vector2(-(contributor.rect.width + Screen.width)/2, contributor.anchoredPosition.y);
             }
         }
     }
