@@ -15,7 +15,7 @@ public class ButtonController : MonoBehaviour
     public void FinishGame()
     {
         // move to restart game screen
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("EndScene");
     }
 
     public void RestartGame() 
