@@ -9,6 +9,12 @@ public class ButtonController : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene
+        SceneManager.LoadScene("GameScene");
+    }
+
+    public void FinishGame()
+    {
+        // move to restart game screen
         SceneManager.LoadScene("MainScene");
     }
 
