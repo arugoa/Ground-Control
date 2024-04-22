@@ -9,7 +9,7 @@ public class ButtonController : MonoBehaviour
     public void StartGame()
     {
         // Load the game scene
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("MainScene");
     }
 
     public void FinishGame()
