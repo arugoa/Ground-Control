@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 221d68475eb0dbf46bd47019ab31ac80
+guid: 72be8fafe02123d4f878845404b20ae0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: astronaut_jump_1
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 42
+        width: 128
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa59c04ecd860a94b9ba66f6ad2ad3d8
+      internalID: -280731310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronaut_jump_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 16
+        width: 119
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cc83d12f7f3794d858ce862ee0ef55
+      internalID: -986807609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronaut_jump_5
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 8
+        width: 118
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359caf45410d86241bef9bb9fb4f1ebe
+      internalID: -1315288767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +208,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      astronaut_jump_0: 1183573785
+      astronaut_jump_1: -280731310
+      astronaut_jump_2: -989586913
+      astronaut_jump_3: 1657793612
+      astronaut_jump_4: -986807609
+      astronaut_jump_5: -1315288767
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

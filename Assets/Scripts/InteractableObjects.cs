@@ -17,7 +17,20 @@ public class InteractableObjects : MonoBehaviour
 
     // For typing input
     public InputField inputField;
-    
+    private void Update()
+    {   
+        // Checks if esc key is pressed, if yes it deactivates all UI screens for crypto,radio, folder and sets everything else active.  
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            monitor.SetActive(false);
+            radio.SetActive(false);
+            folder.SetActive(false);
+            for (int i = 0; i < everythingElse.Count; i++)
+            {
+                everythingElse[i].SetActive(true);
+            }
+        }
+    }
 
     public void OpenFolder()
     {

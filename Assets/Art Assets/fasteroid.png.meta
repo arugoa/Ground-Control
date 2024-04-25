@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 221d68475eb0dbf46bd47019ab31ac80
+guid: 55cdcb12e9e4f9d40b01afcaa26d87d9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fasteroid_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 30
+        width: 209
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6dd13dabc197b344b3abc790d75b169
+      internalID: -1156608464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fasteroid_4
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 30
+        width: 207
+        height: 126
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0437c073a76c9642aaa5e9b9e3f7b65
+      internalID: 1147488111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +187,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fasteroid_0: -1156608464
+      fasteroid_1: -1090671716
+      fasteroid_2: -1438351117
+      fasteroid_3: 651521202
+      fasteroid_4: 1414658739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

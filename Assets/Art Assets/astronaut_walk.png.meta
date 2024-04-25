@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 221d68475eb0dbf46bd47019ab31ac80
+guid: 5608f764be4c55f498a9badbb579aece
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -134,7 +134,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: astronaut_walk_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 14
+        width: 146
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5827fd8d2816f4ea719f5cc31858c3
+      internalID: 1570243111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: astronaut_walk_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 15
+        width: 121
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d291cf3b7784c4a99339388e6e3bce
+      internalID: 1080132528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +187,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      astronaut_walk_0: 1168338972
+      astronaut_walk_1: 1570243111
+      astronaut_walk_2: -581101039
+      astronaut_walk_3: 1080132528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

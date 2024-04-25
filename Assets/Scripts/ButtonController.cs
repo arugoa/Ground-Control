@@ -11,7 +11,11 @@ public class ButtonController : MonoBehaviour
         // Load the game scene
         SceneManager.LoadScene("MainScene");
     }
-
+    public void GameScene()
+    {
+        //Load Platformer Scene
+        SceneManager.LoadScene("GameScene");
+    }
     public void FinishGame()
     {
         // move to restart game screen
