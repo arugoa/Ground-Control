@@ -25,6 +25,8 @@ public class ButtonController : MonoBehaviour
     public void RestartGame() 
     {
         // Load up the start again, and reset variables
+        SpawnObstacles.gameOver = false;
+        GroundScroll.gameOver = false;
         SceneManager.LoadScene("StartScene");
 
         // Reset variables
