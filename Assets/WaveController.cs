@@ -32,8 +32,8 @@ public class WaveController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targetAmplitude = Random.value * 0.75f + 0.25f;
-        targetFrequency = Random.value * 0.75f + 0.25f;
+        targetAmplitude = Random.value * 0.5f + 0.5f;
+        targetFrequency = Random.value * 4 * 0.5f + 0.5f;
     }
 
     // Update is called once per frame
