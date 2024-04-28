@@ -11,12 +11,17 @@ public class InteractableObjects : MonoBehaviour
     
     // Different Frames
     public GameObject monitor;
+    public GameObject crypto;
     public GameObject radio;
     public GameObject folder;
     public List<GameObject> everythingElse = new List<GameObject>();
 
     // For typing input
     public InputField inputField;
+
+    // Counter for number of tasks completed
+    int counter = 0;
+
     private void Update()
     {   
         // Checks if esc key is pressed, if yes it deactivates all UI screens for crypto,radio, folder and sets everything else active.  
@@ -36,6 +41,18 @@ public class InteractableObjects : MonoBehaviour
             {
                 OpenFolder();
             }
+        }
+
+        // Resets the inputField if the monitor is closed
+        if (!crypto.activeSelf)
+        {
+            inputField.text = "";
+        }
+
+        // Checks if game over and we win!
+        if (counter == 2)
+        {
+            SceneManager.LoadScene("EndScene");
         }
     }
 
@@ -65,23 +82,18 @@ public class InteractableObjects : MonoBehaviour
     {
         string userInput = inputField.text;
 
-        Debug.Log(userInput);
-
-        if (userInput == "Hallo")
+        if (userInput.ToLower() == "hallo")
         {
-            monitor.SetActive(false);
+            crypto.SetActive(false);
             for (int i = 0; i < everythingElse.Count; i++)
             {
                 everythingElse[i].SetActive(true);
             }
+
+            counter++;
         }
     }
 
-    // Clearing the box if you close monitor
-    public void ClearBox()
-    {
-        inputField.text = "";
-    }
     public void OpenRadio()
     {
         // Load the game scene
