@@ -22,12 +22,19 @@ public class InteractableObjects : MonoBehaviour
         // Checks if esc key is pressed, if yes it deactivates all UI screens for crypto,radio, folder and sets everything else active.  
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            monitor.SetActive(false);
-            radio.SetActive(false);
-            folder.SetActive(false);
-            for (int i = 0; i < everythingElse.Count; i++)
+            if (monitor.activeSelf || radio.activeSelf || folder.activeSelf)
             {
-                everythingElse[i].SetActive(true);
+                monitor.SetActive(false);
+                radio.SetActive(false);
+                folder.SetActive(false);
+                for (int i = 0; i < everythingElse.Count; i++)
+                {
+                    everythingElse[i].SetActive(true);
+                }
+            }
+            else
+            {
+                OpenFolder();
             }
         }
     }
@@ -54,7 +61,6 @@ public class InteractableObjects : MonoBehaviour
     }
 
     // Typing in the box
-
     public void TypeBox()
     {
         string userInput = inputField.text;
@@ -69,6 +75,12 @@ public class InteractableObjects : MonoBehaviour
                 everythingElse[i].SetActive(true);
             }
         }
+    }
+
+    // Clearing the box if you close monitor
+    public void ClearBox()
+    {
+        inputField.text = "";
     }
     public void OpenRadio()
     {
