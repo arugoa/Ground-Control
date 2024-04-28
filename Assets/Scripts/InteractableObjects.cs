@@ -20,7 +20,7 @@ public class InteractableObjects : MonoBehaviour
     public InputField inputField;
 
     // Counter for number of tasks completed
-    int counter = 0;
+    public static int counter = 0;
 
     private void Update()
     {   
@@ -53,6 +53,7 @@ public class InteractableObjects : MonoBehaviour
         if (counter == 2)
         {
             SceneManager.LoadScene("EndScene");
+            counter = 0;
         }
     }
 
