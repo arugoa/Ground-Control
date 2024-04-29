@@ -20,7 +20,8 @@ public class InteractableObjects : MonoBehaviour
     public InputField inputField;
 
     // Counter for number of tasks completed
-    public static int counter = 0;
+    public static int cryptoCounter = 0;
+    public static int radioCounter = 0;
 
     private void Update()
     {   
@@ -50,10 +51,11 @@ public class InteractableObjects : MonoBehaviour
         }
 
         // Checks if game over and we win!
-        if (counter == 2)
+        if (cryptoCounter == 1  && radioCounter == 2)
         {
             SceneManager.LoadScene("EndScene");
-            counter = 0;
+            cryptoCounter = 0;
+            radioCounter = 0;
         }
     }
 
@@ -91,7 +93,7 @@ public class InteractableObjects : MonoBehaviour
                 everythingElse[i].SetActive(true);
             }
 
-            counter++;
+            cryptoCounter++;
         }
     }
 

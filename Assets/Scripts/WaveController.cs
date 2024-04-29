@@ -11,7 +11,7 @@ public class WaveController : MonoBehaviour
     int resolution = 50;
     float xOffset = 0;
     float yOffset = 0;
-    float waveTolerance = 0.05f;
+    float waveTolerance = 0.1f;
     public float length = 10.0f;
     [SerializeField]
     float xMult = 0.42f;
@@ -66,17 +66,21 @@ public class WaveController : MonoBehaviour
             targetPoints[i] = new Vector3(xOffset + i * length / resolution * xMult, yOffset + 0.82f + targetAmplitude * Mathf.Sin(targetFrequency * i * length / resolution) * yMult, 1);
         }
         targetLineRenderer.SetPositions(targetPoints);
+    }
+
+    public void TestRadio()
+    {
+        Debug.Log("pressed.");
 
         if (Mathf.Abs(amplitude - targetAmplitude) < waveTolerance && Mathf.Abs(frequency - targetFrequency) < waveTolerance)
         {
             RandomizeValues();
-            InteractableObjects.counter++;
+            InteractableObjects.radioCounter++;
             bigRadio.SetActive(false);
             for (int i = 0; i < everythingElse.Count; i++)
             {
                 everythingElse[i].SetActive(true);
             }
         }
-
     }
 }
