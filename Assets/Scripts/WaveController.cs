@@ -68,8 +68,8 @@ public class WaveController : MonoBehaviour
     {
         amplitude = amplitudeSlider.value;
         frequency = frequencySlider.value * 4;
-        Debug.Log("NEW TARG AMP: " + targetAmplitude);
-        Debug.Log("NEW TARG FREQ: " + targetFrequency);
+/*        Debug.Log("NEW TARG AMP: " + targetAmplitude);
+        Debug.Log("NEW TARG FREQ: " + targetFrequency);*/
         
         lineRenderer.positionCount = resolution;
         xOffset = this.transform.position.x;
@@ -110,13 +110,13 @@ public class WaveController : MonoBehaviour
             oldTargetAmp = targetAmplitude;
             oldTargetFreq = targetFrequency;
             
-            Debug.Log("old targ amp: " + oldTargetAmp);
-            Debug.Log("old targ freq: " + oldTargetFreq);
+            /*Debug.Log("old targ amp: " + oldTargetAmp);
+            Debug.Log("old targ freq: " + oldTargetFreq);*/
             ReinitializeValues();
 
 
-            Debug.Log("rerandomized targ amp: " + targetAmplitude);
-            Debug.Log("rerandomized targ freq: " + targetFrequency);
+/*            Debug.Log("rerandomized targ amp: " + targetAmplitude);
+            Debug.Log("rerandomized targ freq: " + targetFrequency);*/
             ampDiff = Mathf.Abs(oldTargetAmp - targetAmplitude);
             freqDiff = Mathf.Abs(oldTargetFreq - targetFrequency);
 
@@ -127,19 +127,19 @@ public class WaveController : MonoBehaviour
                 targetFrequency = targetFrequency % 1.0f;*/
             }
 
-            Debug.Log("diff between old and new amp: " + ampDiff);
+           /* Debug.Log("diff between old and new amp: " + ampDiff);
             Debug.Log("diff between old and new freq: " + freqDiff);
 
             Debug.Log("updated targ amp: " + targetAmplitude);
             Debug.Log("updated targ freq: " + targetFrequency);
-
+           */
             for (int i = 0; i < everythingElse.Count; i++)
             {
                 everythingElse[i].SetActive(true);
             }
         }
 
-        Debug.Log("radio.Counter: " + InteractableObjects.radioCounter);
+      //  Debug.Log("radio.Counter: " + InteractableObjects.radioCounter);
 
 
     }

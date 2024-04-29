@@ -61,21 +61,27 @@ public class InteractableObjects : MonoBehaviour
 
     public void OpenFolder()
     {
-        // Load the game scene
-        folder.SetActive(true);
-        for (int i = 0; i < everythingElse.Count; i++)
+        if (Dialogue.endDialogue == true)
         {
-            everythingElse[i].SetActive(false);
+            // Load the game scene
+            folder.SetActive(true);
+            for (int i = 0; i < everythingElse.Count; i++)
+            {
+                everythingElse[i].SetActive(false);
+            }
         }
 
     }
     public void OpenMonitor()
     {
-        // Load the game scene
-        monitor.SetActive(true);
-        for (int i = 0; i < everythingElse.Count; i++)
+        if (Dialogue.endDialogue == true)
         {
-            everythingElse[i].SetActive(false);
+            // Load the game scene
+            monitor.SetActive(true);
+            for (int i = 0; i < everythingElse.Count; i++)
+            {
+                everythingElse[i].SetActive(false);
+            }
         }
 
     }
@@ -100,11 +106,14 @@ public class InteractableObjects : MonoBehaviour
 
     public void OpenRadio()
     {
-        // Load the game scene
-        radio.SetActive(true);
-        for (int i = 0; i < everythingElse.Count; i++)
+        if (Dialogue.endDialogue == true)
         {
-            everythingElse[i].SetActive(false);
+            // Load the game scene
+            radio.SetActive(true);
+            for (int i = 0; i < everythingElse.Count; i++)
+            {
+                everythingElse[i].SetActive(false);
+            }
         }
 
     }
