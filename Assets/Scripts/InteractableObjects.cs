@@ -94,6 +94,7 @@ public class InteractableObjects : MonoBehaviour
             }
 
             cryptoCounter++;
+            Debug.Log("cryptoCounter: " + cryptoCounter);
         }
     }
 

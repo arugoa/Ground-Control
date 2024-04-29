@@ -14,7 +14,7 @@ public class ButtonController : MonoBehaviour
     public void GameScene()
     {
         //Load Platformer Scene
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("AstronautGameScene");
     }
     public void FinishGame()
     {
