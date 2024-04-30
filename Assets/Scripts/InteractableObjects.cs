@@ -51,8 +51,10 @@ public class InteractableObjects : MonoBehaviour
         }
 
         // Checks if game over and we win!
-        if (cryptoCounter == 1  && radioCounter == 2)
+        if (cryptoCounter == 1  && radioCounter == 1)
         {
+            
+            
             SceneManager.LoadScene("EndScene");
             cryptoCounter = 0;
             radioCounter = 0;
@@ -91,7 +93,7 @@ public class InteractableObjects : MonoBehaviour
     {
         string userInput = inputField.text;
 
-        if (userInput.ToLower() == "hallo")
+        if (userInput.ToLower() == "acoakia")
         {
             crypto.SetActive(false);
             for (int i = 0; i < everythingElse.Count; i++)

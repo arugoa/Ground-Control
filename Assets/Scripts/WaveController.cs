@@ -104,7 +104,6 @@ public class WaveController : MonoBehaviour
 
         if (Mathf.Abs(amplitude - targetAmplitude) < waveTolerance && Mathf.Abs(frequency - targetFrequency) < waveTolerance * 4)
         {
-            if (InteractableObjects.radioCounter < 2) { InteractableObjects.radioCounter++; }
 
             bigRadio.SetActive(false);
             oldTargetAmp = targetAmplitude;
@@ -137,6 +136,8 @@ public class WaveController : MonoBehaviour
             {
                 everythingElse[i].SetActive(true);
             }
+
+            InteractableObjects.radioCounter = 1;
         }
 
       //  Debug.Log("radio.Counter: " + InteractableObjects.radioCounter);
