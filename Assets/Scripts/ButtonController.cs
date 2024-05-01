@@ -6,12 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
+    public void AstronautControlsScene()
+    {
+        SceneManager.LoadScene("AstronautControlsScene");
+    }
+    
     public void StartGame()
     {
         // Load the game scene
         SceneManager.LoadScene("MainScene");
     }
-    public void GameScene()
+    public void AstronautGameScene()
     {
         //Load Platformer Scene
         SceneManager.LoadScene("AstronautGameScene");
