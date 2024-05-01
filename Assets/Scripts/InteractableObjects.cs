@@ -15,6 +15,7 @@ public class InteractableObjects : MonoBehaviour
     public GameObject radio;
     public GameObject folder;
     public List<GameObject> everythingElse = new List<GameObject>();
+    public GameObject endingDialogue;
 
     // For typing input
     public InputField inputField;
@@ -53,9 +54,9 @@ public class InteractableObjects : MonoBehaviour
         // Checks if game over and we win!
         if (cryptoCounter == 1  && radioCounter == 1)
         {
+            endingDialogue.SetActive(true);
             
-            
-            SceneManager.LoadScene("EndScene");
+            /*SceneManager.LoadScene("EndScene");*/
             cryptoCounter = 0;
             radioCounter = 0;
         }

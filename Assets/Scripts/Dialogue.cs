@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Dialogue : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
+    public bool goToEnd = false;
 
     private int index;
     [SerializeField]public static bool endDialogue;
@@ -63,6 +65,10 @@ public class Dialogue : MonoBehaviour
             gameObject.SetActive(false);
             endDialogue = true;
             Debug.Log("end dialogue");
+            if (goToEnd)
+            {
+                SceneManager.LoadScene("EndScene");
+            }
         }
     }
 }
