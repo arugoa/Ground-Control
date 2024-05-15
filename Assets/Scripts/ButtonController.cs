@@ -35,7 +35,8 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("StartScene");
 
         // Reset variables
-        
+        InteractableObjects.cryptoCounter = 0;
+        InteractableObjects.radioCounter = 0;
     }
 
     public void QuitGame()

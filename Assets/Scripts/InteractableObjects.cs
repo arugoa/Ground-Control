@@ -10,10 +10,10 @@ public class InteractableObjects : MonoBehaviour
 {
     
     // Different Frames
-    public GameObject monitor;
-    public GameObject crypto;
-    public GameObject radio;
-    public GameObject folder;
+    public GameObject monitor; // big monitor
+    public GameObject crypto; 
+    public GameObject radio; // big radio
+    public GameObject folder; // big folder
     public List<GameObject> everythingElse = new List<GameObject>();
     public GameObject endingDialogue;
 
@@ -26,8 +26,8 @@ public class InteractableObjects : MonoBehaviour
 
     private void Update()
     {   
-        // Checks if esc key is pressed, if yes it deactivates all UI screens for crypto,radio, folder and sets everything else active.  
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Checks if esc key is pressed, if yes it deactivates all UI screens for bigmonitor, bigradio, bigfolder and sets everything else active.  
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
             if (monitor.activeSelf || radio.activeSelf || folder.activeSelf)
             {
@@ -39,6 +39,31 @@ public class InteractableObjects : MonoBehaviour
                     everythingElse[i].SetActive(true);
                 }
             }
+            /*else
+            {
+                OpenFolder();
+            }*/
+        }
+
+        // Checks if Tab key is pressed, if folder open deactivates all UI screens for crypto, radio, folder, and everything else. 
+        // If folder is closed, open folder
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Debug.Log("Tab pressed");
+            // closes folder
+            if (folder.activeSelf || monitor.activeSelf || radio.activeSelf)
+            {
+                monitor.SetActive(false);
+                radio.SetActive(false);
+                folder.SetActive(false);
+                
+                for (int i = 0; i < everythingElse.Count; i++)
+                {
+                    everythingElse[i].SetActive(true);
+                }
+            }
+
+           
             else
             {
                 OpenFolder();
@@ -73,8 +98,8 @@ public class InteractableObjects : MonoBehaviour
                 everythingElse[i].SetActive(false);
             }
         }
-
     }
+
     public void OpenMonitor()
     {
         if (Dialogue.endDialogue == true)
